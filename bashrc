@@ -3,8 +3,6 @@ export PATH=~/scripts/i3:$PATH
 #Properly config monitors for the i3
 #$HOME/scripts/monitor.sh
 
-source ~/.scripts/proxy.sh
-
 #VIRTUAL_ENV
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
