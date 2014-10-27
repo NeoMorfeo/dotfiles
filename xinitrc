@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec i3 -V >> ~/.config/i3/i3log 2>&1
+#exec synapse
+#exec i3
