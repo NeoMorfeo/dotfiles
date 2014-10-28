@@ -3,6 +3,11 @@ export PATH=~/scripts/i3:$PATH
 #Properly config monitors for the i3
 #$HOME/scripts/monitor.sh
 
+#Extra includes depends on host
+if [[ -f ~/.xtra_includes ]]; then
+  source ~/.xtra_includes
+fi
+
 #VIRTUAL_ENV
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
