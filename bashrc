@@ -17,12 +17,16 @@ _mk_ve_prompt(){
 
 #GIT
 if [[ -f /usr/share/git/completion/git-prompt.sh  ]]; then
-	source /usr/share/git/completion/git-prompt.sh
+       source /usr/share/git/completion/git-prompt.sh
+elif [[ -f ~/.bash-git-prompt/gitprompt.sh  ]]; then
+	source ~/.bash-git-prompt/gitprompt.sh
+elif [[ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]]; then
+	source /usr/share/git-core/contrib/completion/git-prompt.sh
 	GIT_PS1_SHOWCOLORHINTS=1
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWUNTRACKEDFILES=1
 	GIT_PS1_SHOWUPSTREAM="auto"
-	PROMPT_COMMAND='__git_ps1 "\[\e[1;31m\]\u\[\e[m\] \[\e[1;33m\]$(_mk_ve_prompt)\[\e[m\][\[\e[1;34m\]\w\[\e[m\]]" " \n\[\e[1;32m\]╚>\$\[\e[m\] "'
+	PROMPT_COMMAND='__git_ps1 "\[\e[1;31m\]\u\[\e[m\] \[\e[1;33m\]$(_mk_ve_prompt)\[\e[m\][\[\e[1;34m\]\w\[\e[m\]]" " \n\[\e[1;32m\]\$\[\e[m\] "'
 fi
 
 alias ls='ls --color=auto'
@@ -31,6 +35,6 @@ alias ssh="TERM=xterm ssh"
 
 export EDITOR=vim
 export LC_TYPE=es_ES.UTF-8
-export BROWSER=google-chrome-unstable
+export BROWSER=firefox
 export PYTHONSTARTUP=~/.pystartup
 
