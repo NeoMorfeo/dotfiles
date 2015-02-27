@@ -1,3 +1,4 @@
+#!/bin/bash
 export PATH=~/scripts/i3:$PATH
 
 #Properly config monitors for the i3
@@ -6,6 +7,11 @@ export PATH=~/scripts/i3:$PATH
 #Extra includes depends on host
 if [[ -f ~/.xtra_includes ]]; then
   source ~/.xtra_includes
+fi
+
+#Extra path custom scripts 
+if [[ -d ~/dotfiles/scripts ]]; then
+  export PATH=$HOME/dotfiles/scripts:$PATH
 fi
 
 #VIRTUAL_ENV

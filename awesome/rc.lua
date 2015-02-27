@@ -12,7 +12,7 @@ require("naughty")
 beautiful.init("/usr/local/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
+terminal = "urxvt"
 editor = "subl"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -46,7 +46,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[2])
 end
 -- }}}
 
@@ -334,3 +334,7 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+awful.util.spawn_with_shell("run_once.sh xscreensaver")
+awful.util.spawn_with_shell("run_once.sh synergys")
+awful.util.spawn_with_shell("run_once.sh nm-applet")

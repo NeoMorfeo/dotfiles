@@ -19,7 +19,7 @@ urxvt*color12: #0071ff
 urxvt*color13: #ef0051
 urxvt*color14: #4bb8fd
 urxvt*color15: #a020f0
-urxvt*transparent: true
+urxvt*transparent: false
 urxvt*shading: 50
 urxvt*fading: 50
 urxvt*font: xft:Bitstream\ Vera\ Sans\ Mono:style=roman:pixelsize=13
