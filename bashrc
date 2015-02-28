@@ -24,10 +24,16 @@ _mk_ve_prompt(){
 #GIT
 if [[ -f /usr/share/git/completion/git-prompt.sh  ]]; then
        source /usr/share/git/completion/git-prompt.sh
+       SOURCED=0
 elif [[ -f ~/.bash-git-prompt/gitprompt.sh  ]]; then
 	source ~/.bash-git-prompt/gitprompt.sh
+	SOURCED=0
 elif [[ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]]; then
 	source /usr/share/git-core/contrib/completion/git-prompt.sh
+	SOURCED=0
+fi
+
+if [[ $SOURCED -eq 0 ]]; then
 	GIT_PS1_SHOWCOLORHINTS=1
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWUNTRACKEDFILES=1
