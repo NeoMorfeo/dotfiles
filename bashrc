@@ -46,7 +46,8 @@ alias grep='grep --color=auto'
 alias ssh="TERM=xterm ssh"
 
 export EDITOR=vim
-export LC_TYPE=es_ES.UTF-8
+#export LC_TYPE=es_ES.UTF-8
+export LC_TYPE=en_US.UTF-8
 export BROWSER=firefox
 export PYTHONSTARTUP=~/.pystartup
 
