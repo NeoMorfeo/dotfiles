@@ -9,7 +9,7 @@ if [[ -f ~/.xtra_includes ]]; then
 	source ~/.xtra_includes
 fi
 
-#Extra path custom scripts 
+#Extra path custom scripts
 if [[ -d ~/dotfiles/scripts ]]; then
 	export PATH=$HOME/dotfiles/scripts:$PATH
 fi
@@ -21,7 +21,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv-3.4
 source /usr/local/bin/virtualenvwrapper.sh
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
-		echo [$(basename "${VIRTUAL_ENV}")] 
+		echo [$(basename "${VIRTUAL_ENV}")]
 	fi
 }
 
