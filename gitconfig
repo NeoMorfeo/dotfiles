@@ -1,0 +1,17 @@
+[user]
+	name = NeoMorfeo
+	email = neomorfeo@gmail.com
+[color]
+	ui = true
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	s = status --short
+	sb = status --short --branch
+	graph = log --graph --oneline
+	l = log --graph --pretty=\"%Cred%h %Cgreen%ai %Cblue%an%Creset %s%C(yellow)%d\"
+	le = log --graph --pretty=\"%Cred%h %Cgreen%ai %Cblue%an <%ae>%Creset %s%C(yellow)%d\"
+	rso = remote show origin
+	d = diff --color-words
+	dc = diff --cached --color-words
