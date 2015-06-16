@@ -15,6 +15,10 @@ if [[ -d ~/dotfiles/scripts ]]; then
 fi
 
 #VIRTUAL_ENV
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.4
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv-3.4
+source /usr/local/bin/virtualenvwrapper.sh
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
 		echo [$(basename "${VIRTUAL_ENV}")] 
