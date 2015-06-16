@@ -25,7 +25,7 @@ urxvt*fading: 50
 urxvt*font: xft:Bitstream\ Vera\ Sans\ Mono:style=roman:pixelsize=13
 urxvt*scrollBar: false
 URxvt*saveLines: 500000
-urxvt*termName:    rxvt
+urxvt*termName:    xterm
 
 URxvt.colorIT:      		#006a9a
 URxvt.colorBD:      		#2aa7e7
