@@ -11,6 +11,7 @@ require("naughty")
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/usr/local/share/awesome/themes/default/theme.lua")
 
+awful.util.spawn_with_shell("xcompmgr -cF &")
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = "subl"
@@ -42,11 +43,15 @@ layouts =
 -- }}}
 
 -- {{{ Tags
--- Define a tag table which hold all screen tags.
-tags = {}
+-- Define a tag table which will hold all screen tags.
+tags = {                                                                                                                                                                                      
+  names  = { "1 terms", "2 @ ", "3 hp trm", "4 www work", "5 msg", "6 vmr", "7 graphs", "8 edt", "9 www" },
+  layout = { layouts[2], layouts[2], layouts[2], layouts[2], layouts[2],
+  layouts[2], layouts[2], layouts[2], layouts[2] }
+}
 for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[2])
+  -- Each screen has its own tag table.
+  tags[s] = awful.tag(tags.names, s, tags.layout)
 end
 -- }}}
 
@@ -298,9 +303,16 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Firefox" },
+       properties = { tag = tags[1][4] } },
+    { rule = { class = "Sublime_text" },
+       properties = { tag = tags[1][8] } },
+    { rule = { class = "Google-chrome" },
+       properties = { tag = tags[1][9] } },
+    { rule = { name = "WhatsApp Web - Google Chrome"},
+       properties = { tag = tags[1][5] } },
+    { rule = { name = "Telegram Web"},
+       properties = { tag = tags[1][5] } },
 }
 -- }}}
 
@@ -335,6 +347,10 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+mystatusbar = awful.wibox({ position = "bottom", screen = 1, ontop = true, width = 1, height = 16, bg = black })
+
+
 awful.util.spawn_with_shell("run_once.sh xscreensaver")
+awful.util.spawn_with_shell("run_once.sh conky")
 awful.util.spawn_with_shell("run_once.sh synergys")
 awful.util.spawn_with_shell("run_once.sh nm-applet")
