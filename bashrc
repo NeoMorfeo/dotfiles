@@ -16,14 +16,17 @@ fi
 
 #VIRTUAL_ENV
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.4
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv-3.4
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=$(which python)
+export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
+source /usr/bin/virtualenvwrapper.sh
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
 		echo [$(basename "${VIRTUAL_ENV}")]
 	fi
 }
+
+#NVM
+source /usr/share/nvm/init-nvm.sh
 
 #SANDBOX_CHECK
 _mk_sanbox(){
