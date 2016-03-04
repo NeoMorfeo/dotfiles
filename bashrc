@@ -64,3 +64,4 @@ export EDITOR=vim
 export LC_TYPE=en_US.UTF-8
 export BROWSER=firefox
 export PYTHONSTARTUP=~/.pystartup
+export HISTTIMEFORMAT="[%F %T] "
