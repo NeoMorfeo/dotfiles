@@ -3,7 +3,7 @@ color2 888888
 color3 444444
 color4 000000
 
-alignment bottom_middle
+alignment bottom_left
 background yes
 border_width 1
 cpu_avg_samples 2
