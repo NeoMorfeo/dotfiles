@@ -72,7 +72,7 @@ fi
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias ssh="TERM=xterm ssh"
+alias ssh="TERM=xterm ssh -X "
 
 export EDITOR=vim
 #export LC_TYPE=es_ES.utf8
@@ -85,3 +85,5 @@ export HISTTIMEFORMAT="[%F %T] "
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
