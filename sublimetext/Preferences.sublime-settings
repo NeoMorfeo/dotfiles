@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -60,6 +59,8 @@
 	"status_bar_brighter": true,
 	"tab_completion": true,
 	"tabs_small": true,
-	"theme": "Material-Theme-Darker.sublime-theme",
-	"update_check": true
+	"theme": "Afterglow-orange.sublime-theme",
+    "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+    "tabs_small": true,
+	"update_check": false
 }
