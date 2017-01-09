@@ -15,3 +15,5 @@
 	rso = remote show origin
 	d = diff --color-words
 	dc = diff --cached --color-words
+[pull]
+	rebase = true
