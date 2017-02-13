@@ -37,7 +37,7 @@ format_human_readable yes
 
 TEXT
 ${color1}Activity on /dev/sda:${color} ${diskiograph 10,50 000000 ff0000 -t} \
-${alignr}${color1}eth0 [${color3}${addr eth0}${color}]: ${color1}Up:${color} ${upspeed eth0} ${color1} - Down:${color} ${downspeed eth0}     \
+${alignr}${color1}eno1 [${color3}${addr eno1}${color}]: ${color1}Up:${color} ${upspeed eno1} ${color1} - Down:${color} ${downspeed eno1}     \
 ${color1}CPU: ${color} ${cpu}% ${cpubar cpu0 5,50} ${color2}CPU1: ${cpubar cpu1 5,50} CPU2: ${cpubar cpu2 5,50} ${color} \
 ${color2}CPU3: ${cpubar cpu3 5,50} CPU4: ${cpubar cpu4 5,50} ${color} ${color2}CPU5: ${cpubar cpu4 5,50} CPU6: ${cpubar cpu5 5,50} ${color} \
 ${color2}CPU7: ${cpubar cpu6 5,50} \

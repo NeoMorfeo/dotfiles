@@ -1,6 +1,10 @@
 [user]
 	name = NeoMorfeo
 	email = neomorfeo@gmail.com
+[http]
+    proxy = http://web-proxy.nl.hpicorp.net:8080
+[https]
+    proxy = http://web-proxy.nl.hpicorp.net:8080
 [color]
 	ui = true
 [alias]
@@ -17,3 +21,8 @@
 	dc = diff --cached --color-words
 [pull]
 	rebase = true
+
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[merge]
+	tool = meld
