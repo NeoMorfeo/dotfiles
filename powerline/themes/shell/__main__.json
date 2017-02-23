@@ -10,5 +10,10 @@
 				"dir_limit_depth": 3
 			}
 		}
+	},
+	"gitstatus": {
+		"args": {
+			"show_tag": true
+		}
 	}
 }
