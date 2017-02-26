@@ -13,10 +13,14 @@ ln -s $HOME/dotfiles/archey3.cfg $HOME/.archey3.cfg
 
 
 echo "Configuring shells"
+echo "Bash"
 [ -d "$HOME/.bashrc" ] && rm -rf $HOME/.bashrc
 ln -s $HOME/dotfiles/bashrc $HOME/.bashrc
 [ -d "$HOME/.bash_profile" ] && rm -rf $HOME/.bash_profile
 ln -s $HOME/dotfiles/bash_profile $HOME/.bash_profile
+echo "ZSH"
+[ -d "$HOME/.zshrc" ] && rm -rf $HOME/.zshrc
+ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
 
 echo "Configure awesome"
 ln -s $HOME/dotfiles/awesome $HOME/.config/
