@@ -17,8 +17,5 @@
 	dc = diff --cached --color-words
 [pull]
 	rebase = true
-
-[url "https://github.com/"]
-	insteadOf = git://github.com/
 [merge]
 	tool = meld
