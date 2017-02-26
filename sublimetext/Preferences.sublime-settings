@@ -4,7 +4,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 3,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -70,7 +70,6 @@
 	"status_bar_brighter": true,
 	"tab_completion": true,
 	"tabs_small": true,
-	"theme": "Cobalt2.sublime-theme",
-	"update_check": false,
-	"wide_caret": true
+	"theme": "Afterglow-orange.sublime-theme",
+	"update_check": false
 }

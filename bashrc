@@ -94,3 +94,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 	export POWERLINE_BASH_SELECT=1
 	. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 #fi
+#Test first if HiDPI screen
+export QT_SCALE_FACTOR="1.8"
