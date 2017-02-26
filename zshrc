@@ -11,6 +11,10 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+#Fix for home/end keys
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+
 # Powerline
 #
 . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
