@@ -40,7 +40,8 @@ ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 
 echo "Configuring Sublimetext"
 [ -d "$HOME/.config/sublime-text-3" ] && rm -rf $HOME/.config/sublime-text-3
-ln -s $HOME/dotfiles/sublimetext $HOME/.config/sublime-text-3
+ln -s "$HOME/dotfiles/sublimetext/Package Control.sublime-settings" $HOME/.config/sublime-text-3/Packages/User/
+ln -s "$HOME/dotfiles/sublimetext/Preferences.sublime-settings" $HOME/.config/sublime-text-3/Packages/User/
 
 echo "Configuring shells"
 echo "Bash"
