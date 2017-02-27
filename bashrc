@@ -4,21 +4,14 @@ export PATH=~/scripts/i3:$PATH
 #Properly config monitors for the i3
 #$HOME/scripts/monitor.sh
 
-#Extra includes depends on host
-if [[ -f ~/.xtra_includes ]]; then
-	source ~/.xtra_includes
-fi
-
 #Extra path custom scripts
 if [[ -d ~/dotfiles/scripts ]]; then
 	export PATH=$HOME/dotfiles/scripts:$PATH
 fi
 
-#VIRTUAL_ENV
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$(which python)
-export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
-source /usr/bin/virtualenvwrapper.sh
+# VirtualEnvWrapper
+. ${HOME}/dotfiles/common/virtualenv.sh
+
 _mk_ve_prompt(){
 	if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" -a ! -z "${VIRTUAL_ENV}" ] ; then
 		echo [$(basename "${VIRTUAL_ENV}")]
@@ -70,9 +63,7 @@ if [[ $SOURCED -eq 0 ]]; then
 	#PROMPT_COMMAND='__git_ps1 "\[\e[1;31m\]\u\[\e[m\] \[\e[1;33m\]$(_mk_ve_prompt)\[\e[m\][\[\e[1;34m\]\w\[\e[m\]] $(_mk_sanbox)" "\n  \[\e[1;32m\]\$\[\e[m\] "'
 fi
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias ssh="TERM=xterm ssh"
+. ${HOME}/dotfiles/common/alias.sh
 
 export EDITOR=vim
 #export LC_TYPE=es_ES.UTF-8
@@ -83,7 +74,6 @@ export HISTTIMEFORMAT="[%F %T] "
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -96,3 +86,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #fi
 #Test first if HiDPI screen
 export QT_SCALE_FACTOR="1.8"
+
+#Extra includes depends on host
+if [[ -f ~/.xtra_includes ]]; then
+    source ~/.xtra_includes
+fi

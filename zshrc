@@ -55,13 +55,22 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-#Extra includes depends on host
-if [[ -f ~/.xtra_includes ]]; then
-	source ~/.xtra_includes
-fi
+# VirtualEnvWrapper
+. ${HOME}/dotfiles/common/virtualenv.sh
 
-#Powerline
+# Alias
+. ${HOME}/dotfiles/common/alias.sh
+
+# Powerline
 powerline-daemon -q
 export POWERLINE_BASH_CONTINUATION=1
 export POWERLINE_BASH_SELECT=1
 . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Syntax
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#Extra includes depends on host
+if [[ -f ~/.xtra_includes ]]; then
+	source ~/.xtra_includes
+fi
