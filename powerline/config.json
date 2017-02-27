@@ -18,7 +18,7 @@
 		},
 		"shell": {
 			"colorscheme": "solarized",
-			"theme": "default_leftonly",
+			"theme": "neo_theme",
 			"local_themes": {
 				"continuation": "continuation",
 				"select": "select"
