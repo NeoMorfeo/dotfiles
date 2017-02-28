@@ -58,6 +58,9 @@ fi
 # VirtualEnvWrapper
 . ${HOME}/dotfiles/common/virtualenv.sh
 
+#NVM
+. ${HOME}/dotfiles/common/nvm.sh
+
 # Alias
 . ${HOME}/dotfiles/common/alias.sh
 

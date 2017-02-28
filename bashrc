@@ -19,7 +19,7 @@ _mk_ve_prompt(){
 }
 
 #NVM
-source /usr/share/nvm/init-nvm.sh
+. ${HOME}/dotfiles/common/nvm.sh
 
 #SANDBOX_CHECK
 _mk_sanbox(){
