@@ -1,7 +1,5 @@
 {
 	"bootstrapped": true,
-	"http_proxy": "web-proxy.bpo.hp.com:8080",
-	"https_proxy": "web-proxy.bpo.hp.com:8080",
 	"in_process_packages":
 	[
 	],
