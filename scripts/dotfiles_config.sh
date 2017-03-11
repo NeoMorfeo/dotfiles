@@ -25,21 +25,13 @@ ln -s $HOME/dotfiles/Xdefaults $HOME/.Xdefaults
 [ -f "$HOME/.Xresources" ] && rm -rf $HOME/.Xresources
 ln -s $HOME/dotfiles/Xresources $HOME/.Xresources
 
-[ -f "$HOME/.Xsession" ] && rm -rf $HOME/.Xsession
-ln -s $HOME/dotfiles/Xsession $HOME/.Xsession
-
-[ -f "$HOME/.xinitrc" ] && rm -rf $HOME/.xinitrc
-ln -s $HOME/dotfiles/xinitrc $HOME/.xinitrc
-
-[ -f "$HOME/.xprofile" ] && rm -rf $HOME/.xprofile
-ln -s $HOME/dotfiles/xprofile $HOME/.xprofile
-
 echo "Configuring VIM"
 [ -f "$HOME/.vimrc" ] && rm -rf $HOME/.vimrc
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 
 echo "Configuring Sublimetext"
 [ -d "$HOME/.config/sublime-text-3" ] && rm -rf $HOME/.config/sublime-text-3
+mkdir -p $HOME/.config/sublime-text-3/Packages/User/
 ln -s "$HOME/dotfiles/sublimetext/Package Control.sublime-settings" $HOME/.config/sublime-text-3/Packages/User/
 ln -s "$HOME/dotfiles/sublimetext/Preferences.sublime-settings" $HOME/.config/sublime-text-3/Packages/User/
 
