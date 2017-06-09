@@ -19,3 +19,5 @@
 	rebase = true
 [merge]
 	tool = meld
+[http "https://gopkg.in"]
+	followRedirects = true

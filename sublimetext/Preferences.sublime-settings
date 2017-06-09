@@ -58,10 +58,11 @@
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"material_theme_accent_orange": true,
-	"node_path": "/home/neomorfeo/.nvm/versions/node/v7.7.2/bin/node",
+	"node_path": "/home/neomorfeo/.nvm/versions/node/v8.1.0/bin/node",
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
+		100,
 		120
 	],
 	"show_encoding": true,
