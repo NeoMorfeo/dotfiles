@@ -65,13 +65,12 @@ fi
 . ${HOME}/dotfiles/common/alias.sh
 
 # Powerline
-powerline-daemon -q
-export POWERLINE_BASH_CONTINUATION=1
-export POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+. ${HOME}/dotfiles/common/powerline.sh
 
 # Syntax
-. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 #Extra includes depends on host
 if [[ -f ~/.xtra_includes ]]; then

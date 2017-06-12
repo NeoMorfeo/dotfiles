@@ -78,12 +78,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #Powerline
-#if [[ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]]; then
-	powerline-daemon -q
-	export POWERLINE_BASH_CONTINUATION=1
-	export POWERLINE_BASH_SELECT=1
-	. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
-#fi
+. ${HOME}/dotfiles/common/powerline.sh
+
 #Test first if HiDPI screen
 export QT_SCALE_FACTOR="1.8"
 
@@ -91,3 +87,4 @@ export QT_SCALE_FACTOR="1.8"
 if [[ -f ~/.xtra_includes ]]; then
     source ~/.xtra_includes
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
