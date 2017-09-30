@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Angular2 HTML Syntax",
 		"ApacheConf.tmLanguage",
 		"Babel",
@@ -21,6 +22,7 @@
 		"Indent XML",
 		"INI",
 		"Jinja2",
+		"Kivy Language",
 		"Markdown Preview",
 		"Material Color Scheme",
 		"Material Theme",
