@@ -17,6 +17,14 @@ ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 [ -f "$HOME/.archey3.cfg" ] && rm -rf $HOME/.archey3.cfg
 ln -s $HOME/dotfiles/archey3.cfg $HOME/.archey3.cfg
 
+echo "Configuring nvm"
+if [ ! -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm" && (
+    git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+  ) && . "$NVM_DIR/nvm.sh"
+fi;
 
 echo "Config for standar X configs"
 [ -f "$HOME/.Xdefaults" ] && rm -rf $HOME/.Xdefaults

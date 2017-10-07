@@ -1,6 +1,8 @@
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/neomorfeo/.zshrc'
 
+ZSH_THEME="random"
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -71,6 +73,8 @@ fi
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+plugins=(git)
 
 #Extra includes depends on host
 if [[ -f ~/.xtra_includes ]]; then
