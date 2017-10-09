@@ -6,6 +6,12 @@
 				"priority": 10
 			},
 			{
+				"function": "powerline.segments.common.env.environment",
+				"args": {
+					"variable": "AE_SANDBOX"
+				}
+			},
+			{
 				"function": "powerline.segments.common.env.user",
 				"priority": 30
 			},
