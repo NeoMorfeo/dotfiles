@@ -46,14 +46,6 @@ echo "Configuring VIM"
 [ -f "$HOME/.vimrc" ] && rm -rf $HOME/.vimrc
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 
-echo "Configuring Sublimetext"
-SUBL_CONFIG_DIR="$HOME/.config/sublime-text-3"
-[ -d "$SUBL_CONFIG_DIR" ] && rm -rf $SUBL_CONFIG_DIR
-mkdir -p $SUBL_CONFIG_DIR/Packages/User
-ln -s "$HOME/dotfiles/sublimetext/Package Control.sublime-settings" $SUBL_CONFIG_DIR/Packages/User/
-ln -s "$HOME/dotfiles/sublimetext/Preferences.sublime-settings" $SUBL_CONFIG_DIR/Packages/User/
-ln -s "$HOME/dotfiles/sublimetext/Default\ \(Linux\).sublime-keymap" $SUBL_CONFIG_DIR/Packages/User/
-
 echo "Configuring shells"
 echo "Bash"
 [ -f "$HOME/.bashrc" ] && rm -rf $HOME/.bashrc
