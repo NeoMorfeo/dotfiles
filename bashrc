@@ -88,3 +88,7 @@ if [[ -f ~/.xtra_includes ]]; then
     source ~/.xtra_includes
 fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/neomorfeo/.sdkman"
+[[ -s "/home/neomorfeo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/neomorfeo/.sdkman/bin/sdkman-init.sh"

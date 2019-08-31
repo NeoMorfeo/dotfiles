@@ -15,13 +15,6 @@ memory-calculation-method='all'
 cpu-display=true
 cpu-show-text=true
 
-[tilingnome]
-split-ratio=0.85000000000000031
-master-count=uint32 1
-
-[tilingnome/keybindings]
-decrease-split=['<Shift><Super>z']
-
 [space-iflow-randomwallpaper-sources]
 source='unsplash'
 minutes-elapsed=0

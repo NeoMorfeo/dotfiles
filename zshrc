@@ -60,6 +60,10 @@ fi
 # VirtualEnvWrapper
 . ${HOME}/dotfiles/common/virtualenv.sh
 
+# Find your Python User Base path (where Python --user will install packages/scripts)
+USER_BASE_PATH=$(python -m site --user-base)
+export PATH=$PATH:$USER_BASE_PATH/bin
+
 #NVM
 . ${HOME}/dotfiles/common/nvm.sh
 
@@ -80,3 +84,7 @@ plugins=(git)
 if [[ -f ~/.xtra_includes ]]; then
 	source ~/.xtra_includes
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/neomorfeo/.sdkman"
+[[ -s "/home/neomorfeo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/neomorfeo/.sdkman/bin/sdkman-init.sh"
