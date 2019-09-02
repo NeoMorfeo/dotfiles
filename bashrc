@@ -92,3 +92,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/neomorfeo/.sdkman"
 [[ -s "/home/neomorfeo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/neomorfeo/.sdkman/bin/sdkman-init.sh"
+export EDITOR=vim

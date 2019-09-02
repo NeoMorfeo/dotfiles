@@ -19,5 +19,25 @@
 	rebase = true
 [merge]
 	tool = meld
+
+[credential "https://github.azc.ext.hp.com"]
+	username = guillermo.santos-melgar@hp.com
+
 [http "https://gopkg.in"]
 	followRedirects = true
+[url "https://github.com/"]
+	insteadOf = git@github.com: 
+	insteadOf = git://github.com/
+
+[url "https://gitlab.com/"]
+	insteadOf = git@gitlab.com:
+	insteadOf = git://gitlab.com/
+
+
+[credential]
+	helper = cache --timeout=43200
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
