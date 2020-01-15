@@ -78,6 +78,11 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 	. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+
+# FZF
+. /usr/share/fzf/key-bindings.zsh
+. /usr/share/fzf/completion.zsh
+
 plugins=(git)
 
 #Extra includes depends on host
