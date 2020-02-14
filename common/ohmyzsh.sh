@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/neomorfeo/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,9 +51,14 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git aws)
 
-source $ZSH/oh-my-zsh.sh
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vcs)
+
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
 
 # User configuration
 

@@ -1,8 +1,6 @@
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/neomorfeo/.zshrc'
-
-ZSH_THEME="random"
-
+zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -56,7 +54,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
-
 # VirtualEnvWrapper
 . ${HOME}/dotfiles/common/virtualenv.sh
 
@@ -71,19 +68,19 @@ export PATH=$PATH:$USER_BASE_PATH/bin
 . ${HOME}/dotfiles/common/alias.sh
 
 # Powerline
-. ${HOME}/dotfiles/common/powerline.sh
+#. ${HOME}/dotfiles/common/powerline.sh
+
+# OMYZSH
+source ${HOME}/dotfiles/common/ohmyzsh.sh
 
 # Syntax
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-
 # FZF
 . /usr/share/fzf/key-bindings.zsh
 . /usr/share/fzf/completion.zsh
-
-plugins=(git)
 
 #Extra includes depends on host
 if [[ -f ~/.xtra_includes ]]; then
@@ -91,7 +88,3 @@ if [[ -f ~/.xtra_includes ]]; then
 fi
 
 export EDITOR=vim
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/neomorfeo/.sdkman"
-[[ -s "/home/neomorfeo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/neomorfeo/.sdkman/bin/sdkman-init.sh"
