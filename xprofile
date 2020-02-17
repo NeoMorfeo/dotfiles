@@ -1,0 +1,4 @@
+# Script to enable numlcok on load
+if [ -x /usr/bin/numlockx ]; then
+      /usr/bin/numlockx on
+fi

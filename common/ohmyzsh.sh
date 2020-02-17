@@ -57,6 +57,13 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vcs)
 
+#Custom colors
+POWERLEVEL9K_AWS_BACKGROUND='172'
+POWERLEVEL9K_VIRTUALENV_BACKGROUND='029'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='081'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='000'
+
+
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 
