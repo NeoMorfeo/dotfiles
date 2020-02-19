@@ -56,6 +56,8 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws)
 
+
+
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vcs)
@@ -66,8 +68,10 @@ POWERLEVEL9K_VIRTUALENV_BACKGROUND='112'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='074'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='000'
 
-
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
+#CUSTOM ICON
+OS_ICON='\uf303'
 
 
 # User configuration
