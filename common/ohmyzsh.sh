@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/usr/share/oh-my-zsh
 
+export TERM="xterm-256color"
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -29,10 +32,10 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -54,7 +57,7 @@ ZSH_THEME="agnoster"
 plugins=(git aws)
 
 POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vcs)
 
 #Custom colors

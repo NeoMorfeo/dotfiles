@@ -64,6 +64,7 @@ if [[ $SOURCED -eq 0 ]]; then
 fi
 
 . ${HOME}/dotfiles/common/alias.sh
+. ${HOME}/dotfiles/common/functions.sh
 
 export EDITOR=vim
 #export LC_TYPE=es_ES.UTF-8

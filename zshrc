@@ -67,6 +67,9 @@ export PATH=$PATH:$USER_BASE_PATH/bin
 # Alias
 . ${HOME}/dotfiles/common/alias.sh
 
+# Functions
+. ${HOME}/dotfiles/common/functions.sh
+
 # Powerline
 #. ${HOME}/dotfiles/common/powerline.sh
 
