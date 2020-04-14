@@ -55,16 +55,6 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws)
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context virtualenv aws dir dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs vcs)
-
-#Custom colors
-POWERLEVEL9K_AWS_BACKGROUND='172'
-POWERLEVEL9K_VIRTUALENV_BACKGROUND='112'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='074'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='000'
-
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 #CUSTOM ICON
@@ -249,7 +239,7 @@ OS_ICON='\uf303'
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
   # Make the icon bold.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='%B${P9K_CONTENT}'
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -1625,7 +1615,7 @@ OS_ICON='\uf303'
   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload
   # can slow down prompt by 1-2 milliseconds, so it's better to keep it turned off unless you
   # really need it.
-  typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
+  typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=false
 
   # If p10k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
