@@ -28,7 +28,7 @@ fi
 echo "Linking isla documents"
 ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Documentos ${HOME}/Documentos
 ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Imágenes ${HOME}/Imágenes
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/music ${HOME}/Música
+ln -s /net/lersan.synology.me/volume1/music ${HOME}/Música
 ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Proyectos ${HOME}/Proyectos
 ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/backups ${HOME}/Backups
 ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/.ssh ${HOME}/.ssh
