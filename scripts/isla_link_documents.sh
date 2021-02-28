@@ -1,5 +1,9 @@
 #!/bin/sh
 
+ISLA=${SERVER:-/net/isla.lersan.synology.me}
+
+echo "Using server ${ISLA} as base path"
+
 echo "Make backup of actual home"
 if [ -d "${HOME}/Documentos" ]; then
 	mv "${HOME}/Documentos" "${HOME}/Documentos_bck"
@@ -26,9 +30,9 @@ if [ -d "${HOME}/.ssh" ]; then
 fi
 
 echo "Linking isla documents"
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Documentos ${HOME}/Documentos
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Imágenes ${HOME}/Imágenes
-ln -s /net/lersan.synology.me/volume1/music ${HOME}/Música
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/Proyectos ${HOME}/Proyectos
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/backups ${HOME}/Backups
-ln -s /net/lersan.synology.me/volume1/homes/neomorfeo/.ssh ${HOME}/.ssh
+ln -s ${ISLA}/volume1/homes/neomorfeo/Documentos ${HOME}/Documentos
+ln -s ${ISLA}/volume1/homes/neomorfeo/Imágenes ${HOME}/Imágenes
+ln -s ${ISLA}/volume1/homes/neomorfeo/music ${HOME}/Música
+ln -s ${ISLA}/volume1/homes/neomorfeo/Proyectos ${HOME}/Proyectos
+ln -s ${ISLA}/volume1/homes/neomorfeo/backups ${HOME}/Backups
+ln -s ${ISLA}/volume1/homes/neomorfeo/.ssh ${HOME}/.ssh
